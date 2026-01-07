@@ -4,6 +4,12 @@ header { background: #1f2937; color: white; padding: 2rem 1rem; text-align: cent
 .menu-toggle { display: none; position: absolute; left: 1rem; top: 1.1rem; background: transparent; color: white; border: none; font-size: 1.4rem; cursor: pointer; }
 .subtitle { opacity: 0.9; }
 
+/* Header layout with profile image */
+.header-inner { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.header-text { display: flex; flex-direction: column; align-items: flex-start; }
+.header-text h1 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
+.profile-img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.25); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+
 /* Layout: sidebar + main */
 .layout { display: flex; gap: 1rem; max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
 .sidebar { width: 220px; background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 8px rgba(20,20,30,0.06); }
@@ -25,4 +31,9 @@ footer { text-align: center; padding: 1rem 0; color: #6b7280; }
 	.sidebar { width: 100%; display: none; order: -1; }
 	.menu-toggle { display: inline-block; }
 	body.show-menu .sidebar { display: block; }
+}
+@media (max-width: 600px) {
+	.profile-img { width: 64px; height: 64px; }
+	.header-text h1 { font-size: 1.4rem; }
+	.header-text { align-items: center; text-align: center; }
 }
